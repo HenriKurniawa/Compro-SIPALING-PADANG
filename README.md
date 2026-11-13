@@ -1,3 +1,5 @@
+
+
 # Compro-SIPALING-PADANG — SiPaling Naspad
 
 > **COMPUTING PROJECT** | Program Studi S-1 Informatika — Universitas Telkom Surabaya, 2026
@@ -10,15 +12,18 @@ Platform terintegrasi berbasis **Web dan Mobile** untuk memodernisasi operasiona
 
 ```text
 Compro-SIPALING-PADANG/
-├── mobile-app/                   # Platform Mobile — Customer & Riders (Android/iOS)
-│                                 # Framework: Flutter / React Native (TBD)
+├── mobile-app/                   # Platform Mobile (React Native / Expo)
+│   ├── customer/                 # Aplikasi Mobile Customer (React Native / Expo)
+│   └── rider/                    # Aplikasi Mobile Rider (React Native / Expo)
 │
-├── web-dashboard/                # Platform Web — Korlap & Admin Warehouse (Browser)
-│                                 # Framework: TBD
+├── web-dashboard/                # Platform Web (React / Vite)
+│   ├── landingpage/              # Web Landing Page (NFC Onboarding & Promo)
+│   ├── korlap/                   # Web Dashboard Koordinator Lapangan (Korlap)
+│   └── admin-warehouse/          # Web Dashboard Admin Warehouse (Gudang)
 │
 ├── backend/                      # API Terpusat (REST + WebSocket)
-│                                 # Runtime: Node.js / Python FastAPI (TBD)
-│                                 # Database: PostgreSQL / MongoDB + Redis (TBD)
+│   ├── src/                      # Controllers, routes, models, middleware, services
+│   └── database/                 # Migrations & seeders
 │
 ├── docs/                         # Dokumentasi teknis & arsitektur
 │   ├── requirements/
@@ -101,9 +106,33 @@ Contoh penamaan: `feature/mobile-gps-broadcast`, `feature/web-route-management`,
 
 ---
 
-## ⚙️ Setup Lokal
+## ⚙️ Cara Menjalankan Aplikasi Lokal
 
-Belum ditetapkan — menunggu keputusan stack teknologi (framework, database, hosting). Setelah stack diputuskan, tambahkan panduan setup ke masing-masing folder: `mobile-app/`, `web-dashboard/`, dan `backend/`.
+### 1. Landing Page (Web)
+```bash
+cd web-dashboard/landingpage
+npm install
+npm run dev
+# Buka http://localhost:5173 di browser
+```
+
+### 2. Customer Mobile App
+```bash
+cd mobile-app/customer
+npm install
+npx expo start --web
+# Buka http://localhost:8081 di browser
+# Demo login: 081234567890 / naspad2026 (OTP: 123456)
+```
+
+### 3. Rider Mobile App
+```bash
+cd mobile-app/rider
+npm install
+npx expo start --web
+# Buka http://localhost:8082 di browser
+# Demo login: budi.grb012 / naspad2026
+```
 
 ---
 
