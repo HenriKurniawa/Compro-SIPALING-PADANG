@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Sipaling NasPad",
+    "slug": "sipaling-customer",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#FFF8EC",
+    "splash": {
+      "image": "./assets/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#922D20"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "id.sipaling.customer",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Lokasi dipakai untuk mencari gerobak Sipaling dalam radius 1,5 km dan menentukan titik antar."
+      }
+    },
+    "android": {
+      "package": "id.sipaling.customer",
+      "adaptiveIcon": {
+        "backgroundColor": "#922D20",
+        "foregroundImage": "./assets/logo.png"
+      },
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION"],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/logo.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Lokasi dipakai untuk mencari gerobak Sipaling dalam radius 1,5 km dan menentukan titik antar."
+        }
+      ]
+    ]
+  }
+}

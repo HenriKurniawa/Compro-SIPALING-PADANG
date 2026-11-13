@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "Sipaling Rider",
+    "slug": "sipaling-riders",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#FFF8EC",
+    "splash": {
+      "image": "./assets/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#922D20"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "id.sipaling.rider",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Lokasi dipakai untuk menampilkan gerobakmu di peta customer dan Korlap selama status Sedang bekerja."
+      }
+    },
+    "android": {
+      "package": "id.sipaling.rider",
+      "adaptiveIcon": {
+        "backgroundColor": "#922D20",
+        "foregroundImage": "./assets/logo.png"
+      },
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION"],
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Lokasi dipakai untuk menampilkan gerobakmu di peta customer dan Korlap selama status Sedang bekerja."
+        }
+      ]
+    ]
+  }
+}
