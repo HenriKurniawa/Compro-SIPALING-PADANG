@@ -1,0 +1,24 @@
+# dependencies
+node_modules/
+sipaling/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# debug / temporary
+.playwright-mcp/
+*.log
+npm-debug.*
+yarn-debug.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# local env
+.env*.local
+
+
