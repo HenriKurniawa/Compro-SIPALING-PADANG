@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/700.css";
+@import "leaflet/dist/leaflet.css";
+
+/* Token warna diambil dari Figma "DAPUR → Page Korlap" (node 873:16572) */
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --color-maroon-950: #3D110D; /* teks di atas tombol oranye */
+  --color-maroon-900: #641C16; /* header, judul */
+  --color-maroon-800: #7A2318;
+  --color-maroon-700: #922D20; /* aksi utama maroon, marker aktif */
+  --color-ink: #572019;        /* teks isi / label */
+  --color-muted: #7A4A3E;      /* teks sekunder */
+  --color-placeholder: #8A6A60;
+
+  --color-cream: #FFF8EC;      /* latar halaman */
+  --color-sand: #F4E6C8;       /* aksen krem, garis kartu */
+  --color-line: #E8D5AE;       /* border input */
+  --color-orange: #F47716;     /* tombol aksi utama */
+
+  --color-success-bg: #E4F0DF;
+  --color-success-fg: #24461D;
+  --color-success-dot: #3E7A33;
+  --color-live-dot: #8FD07F;
+
+  --color-idle-bg: #ECE7E3;
+  --color-idle-fg: #4A3F38;
+  --color-idle-dot: #8A7D74;
+  --color-idle-avatar: #D6CCC5;
+
+  --color-danger: #B3261E;
+  --color-danger-bg: #F8E1DC;
+  --color-overlay: #2A0E0B;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Peta: nada hangat agar selaras dengan palet krem desain */
+.korlap-map {
+  background-color: #EFE3C6;
+  font-family: var(--font-sans);
+}
+.korlap-map .leaflet-tile-pane {
+  filter: sepia(0.35) saturate(0.85) hue-rotate(-8deg) brightness(1.03);
+}
+.korlap-map .leaflet-div-icon {
+  background: transparent;
+  border: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8CCB8;
+  border-radius: 4px;
+}
