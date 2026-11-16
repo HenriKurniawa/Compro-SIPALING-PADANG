@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@import "@fontsource/plus-jakarta-sans/400.css";
+@import "@fontsource/plus-jakarta-sans/500.css";
+@import "@fontsource/plus-jakarta-sans/600.css";
+@import "@fontsource/plus-jakarta-sans/700.css";
+@import "@fontsource/plus-jakarta-sans/800.css";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --color-maroon: #800020;
+  --color-maroon-dark: #670010;
+  --color-maroon-deep: #4A1515;
+  --color-maroon-main: #6B1D16;
+
+  --color-orange: #FF7A00;
+  --color-orange-dark: #FF9500;
+  --color-orange-primary: #F47716;
+
+  --color-cream: #F8F9FA;
+  --color-cream-alt: #F8F3EA;
+  --color-border-warm: #EADBCE;
+}
+
+/* Pola Motif Diamond Songket Minang SiPaling */
+.motif-songket {
+  background-color: #4A1515;
+  background-image: 
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0 2px, transparent 2px 24px),
+    repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.02) 0 2px, transparent 2px 24px);
+}
+
+/* Global instant transitions / zero delay (sesuai arahan user & PM) */
+*, *::before, *::after {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: none !important;
+  animation: none !important;
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+body {
+  margin: 0;
+  background-color: #F8F9FA;
+  color: #331A15;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar untuk web */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.03);
+}
+::-webkit-scrollbar-thumb {
+  background: #D8CCB8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B9A892;
+}

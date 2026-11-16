@@ -1,26 +1,46 @@
-const todayDateStr = new Date().toISOString().slice(0, 10);
-const yesterdayDateStr = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+import type { Admin, MenuItem, Rider, StockInBatch, StockOutBatch, PurchaseReport } from '../types';
 
-export const MENUS = [
+export const todayDateStr = new Date().toISOString().slice(0, 10);
+export const yesterdayDateStr = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+
+export const MENUS: MenuItem[] = [
   { name: 'Nasi Putih', price: 5000 },
   { name: 'Ayam Pop', price: 15000 },
   { name: 'Rendang Sapi', price: 18000 },
   { name: 'Telur Balado', price: 8000 },
 ];
 
-export const ADMINS = [
-  { id: 'a1', name: 'Admin Kertajaya', warehouse: 'Kertajaya', activated: true, username: 'admin', password: 'password' },
-  { id: 'a2', name: 'Admin Darmo', warehouse: 'Darmo', activated: false },
+export const ADMINS: Admin[] = [
+  {
+    id: 'a1',
+    name: 'Admin Kertajaya',
+    warehouse: 'Kertajaya',
+    activated: true,
+    username: 'admin',
+    password: 'password',
+    phone: '0812-7788-9100',
+    role: 'Warehouse Officer',
+  },
+  {
+    id: 'a2',
+    name: 'Admin Darmo',
+    warehouse: 'Darmo',
+    activated: false,
+    username: 'admin.darmo',
+    password: 'password',
+    phone: '0813-8899-2233',
+    role: 'Warehouse Officer',
+  },
 ];
 
-export const RIDERS = [
+export const RIDERS: Rider[] = [
   { id: 'R-012', name: 'Budi Santoso', gerobak: 'G-012', phone: '0812 1111 0012', status: 'Aktif' },
   { id: 'R-008', name: 'Sari Wulandari', gerobak: 'G-008', phone: '0812 1111 0008', status: 'Aktif' },
   { id: 'R-005', name: 'Agus Pratama', gerobak: 'G-005', phone: '0812 1111 0005', status: 'Aktif' },
   { id: 'R-019', name: 'Lina Marlina', gerobak: 'G-019', phone: '0812 1111 0019', status: 'Aktif' },
 ];
 
-export const STOCK_IN = [
+export const STOCK_IN: StockInBatch[] = [
   {
     id: 'IN-001-TODAY',
     date: todayDateStr,
@@ -45,7 +65,7 @@ export const STOCK_IN = [
   },
 ];
 
-export const STOCK_OUT = [
+export const STOCK_OUT: StockOutBatch[] = [
   {
     id: 'OUT-001',
     date: todayDateStr,
@@ -106,7 +126,7 @@ export const STOCK_OUT = [
   },
 ];
 
-export const PURCHASES = [
+export const PURCHASES: PurchaseReport[] = [
   {
     id: 'PB-001',
     riderId: 'R-012',
