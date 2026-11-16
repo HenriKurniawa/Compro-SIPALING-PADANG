@@ -134,6 +134,15 @@ npx expo start --web
 # Demo login: budi.grb012 / naspad2026
 ```
 
+### 4. Admin Warehouse (Web Dashboard)
+```bash
+cd web-dashboard/admin-warehouse
+npm install
+npm run web
+# Buka http://localhost:8081 di browser (atau port berikutnya jika 8081 terpakai)
+# Demo login: admin / password
+```
+
 ---
 
 ## 📊 Status Keputusan Teknis
