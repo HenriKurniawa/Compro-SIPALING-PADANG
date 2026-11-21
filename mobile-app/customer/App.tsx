@@ -66,7 +66,14 @@ function Tabs() {
 }
 
 function Routes() {
-  const { customer } = useSession();
+  const { customer, loading } = useSession();
+  if (loading) {
+    return (
+      <View style={{ flex: 1, backgroundColor: colors.cream, alignItems: 'center', justifyContent: 'center' }}>
+        <ActivityIndicator color={colors.maroon} />
+      </View>
+    );
+  }
   return (
     <Stack.Navigator screenOptions={{ headerShown: false, animation: 'slide_from_right' }}>
       {customer ? (
