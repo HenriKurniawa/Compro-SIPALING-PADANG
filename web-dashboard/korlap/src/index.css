@@ -32,6 +32,7 @@
 
   --color-danger: #B3261E;
   --color-danger-bg: #F8E1DC;
+  --color-error-ink: #6E1F15;  /* teks banner error login (Figma 873:16773) */
   --color-overlay: #2A0E0B;
 }
 

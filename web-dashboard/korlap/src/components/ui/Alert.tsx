@@ -5,8 +5,8 @@ export const Alert = ({ tone, children, className }: { tone: 'error' | 'success'
   <div
     role={tone === 'error' ? 'alert' : 'status'}
     className={cn(
-      'rounded-xl px-2.5 py-3 text-sm font-bold',
-      tone === 'error' ? 'bg-danger-bg text-maroon-700' : 'bg-success-bg text-success-fg',
+      'rounded-xl px-2.5 py-3 text-sm leading-[17px] font-bold',
+      tone === 'error' ? 'bg-danger-bg text-error-ink' : 'bg-success-bg text-success-fg',
       className,
     )}
   >
