@@ -17,7 +17,7 @@ export const MapLegend = () => (
 );
 
 export const ZoomControls = ({ onZoomIn, onZoomOut }: { onZoomIn: () => void; onZoomOut: () => void }) => (
-  <div className={`flex w-11 flex-col overflow-hidden rounded-xl ${panel}`}>
+  <div className={`flex w-11 flex-col overflow-hidden rounded-[14px] ${panel}`}>
     <button
       type="button"
       onClick={onZoomIn}
@@ -41,7 +41,7 @@ export const ShowAllButton = ({ onClick }: { onClick: () => void }) => (
   <button
     type="button"
     onClick={onClick}
-    className={`h-11 cursor-pointer rounded-xl px-4 text-sm font-bold text-maroon-900 hover:bg-cream ${panel}`}
+    className={`h-11 cursor-pointer rounded-[14px] px-4 text-sm font-bold text-maroon-900 hover:bg-cream ${panel}`}
   >
     Tampilkan semua rider
   </button>

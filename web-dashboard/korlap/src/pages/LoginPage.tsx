@@ -105,7 +105,7 @@ export const LoginPage = () => {
           <p className="mt-1.5 text-[15px] text-muted">Gunakan akun wilayah Kertajaya atau Darmo.</p>
 
           {error && (
-            <Alert tone="error" className="mt-[14px] text-[13px]">
+            <Alert tone="error" className="mt-[14px]">
               {error}
             </Alert>
           )}
